@@ -54,10 +54,5 @@ public class PrimeNumbersTest {
 	public void testThree() throws Exception {
 		assertEquals(list(2), generate(3));
 	}
-	
-	@Test
-	public void testThirteen() throws Exception {
-		assertEquals(list(2,3,5,7,11), generate(13));
-	}
 
 }
