@@ -19,10 +19,9 @@ public class PrimeNumbers {
 		List<Integer> primes = new ArrayList<Integer>();
 		for (int candidate = 2; candidate < input; candidate++){
 			if (isPrime(candidate)){
-				primes.add(candidate);
+				primes.add(candidate)
 			}
 		}
-		return primes;
 	}
 
 }

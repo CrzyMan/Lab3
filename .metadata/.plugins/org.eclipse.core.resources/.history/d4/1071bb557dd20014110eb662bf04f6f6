@@ -1,0 +1,17 @@
+package primeFactors;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class PrimeNumbers {
+
+	public static List<Integer> generate(Integer input) {
+		List<Integer> primes = new ArrayList<Integer>();
+		for (int candidate = 2; candidate < input; candidate++) {
+			if (input % candidate == 0) {
+				return false;
+			}
+		}
+	}
+
+}
