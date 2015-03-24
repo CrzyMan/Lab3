@@ -1,0 +1,18 @@
+package primeFactors;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+import org.junit.runners.Parameterized.Parameter;
+import org.junit.runners.Parameterized.Parameters;
+
+public class PrimeNumbersTest {
+	
+	@Parameters.parameters
+	
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

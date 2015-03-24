@@ -1,0 +1,9 @@
+package primeFactors;
+
+public class PrimeNumberChecker {
+
+	public boolean validate(Integer input) {
+		return false;
+	}
+
+}
