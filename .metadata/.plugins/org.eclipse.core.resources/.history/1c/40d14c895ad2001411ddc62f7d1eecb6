@@ -1,0 +1,16 @@
+package primeFactors;
+
+import static org.junit.Assert.*;
+
+import javax.crypto.AEADBadTagException;
+
+import org.junit.Test;
+
+public class PrimeFactorsTest {
+
+	@Test
+	public void testOne() {
+		assertEquals(list(), PrimeFactors.generate(1));
+	}
+
+}
