@@ -1,0 +1,12 @@
+package primeFactors;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class PrimeNumberChecker {
+
+	public List<Integer> generate(Integer input) {
+		return new ArrayList<Integer>(1);
+	}
+
+}

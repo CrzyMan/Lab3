@@ -1,7 +1,6 @@
 package primeFactors;
 
 import static org.junit.Assert.*;
-import static primeFactors.PrimeNumbers.generate;
 
 import java.util.Arrays;
 import java.util.Collection;
