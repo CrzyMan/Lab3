@@ -4,15 +4,16 @@ import static org.junit.Assert.*;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
-@RunWith(Parameterized.class)
+//@RunWith(Parameterized.class)
 public class PrimeNumbersTest {
-	
+	/* *
 	private Integer input;
 	private boolean expected;
 	private PrimeNumberChecker primeNumberChecker;
@@ -30,17 +31,27 @@ public class PrimeNumbersTest {
 	@Parameterized.Parameters
 	public static Collection<Object[]> primeNumbers() {
 		return Arrays.asList(new Object[][]{
-				{2, true},
-				{6, false},
+				{3, {2}},
+				{6, {2,5}},
 				{19, true},
 				{22, false},
 				{23, true}
 		});
 	}
-	
+		
 	@Test
 	public void testPrimeNumberChecker() {
-		assertEquals(expected, primeNumberChecker.validate(input));
+		assertEquals(expected, primeNumberChecker.generate(input));
+	}
+	/* */
+	
+	private List<Integer> list(Integer...integers) {
+		return Arrays.asList(integers);
+	}
+	
+	@Test
+	public void testThree() throws Exception {
+		assertEquals(list(2), PrimeFactors.generate(3));
 	}
 
 }

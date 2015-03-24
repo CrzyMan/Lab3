@@ -1,0 +1,46 @@
+package primeFactors;
+
+import static org.junit.Assert.*;
+
+import java.util.Arrays;
+import java.util.Collection;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+
+@RunWith(Parameterized.class)
+public class PrimeNumbersTest {
+	
+	private Integer input;
+	private boolean expected;
+	private PrimeNumberChecker primeNumberChecker;
+	
+	@Before
+	public void initialize() {
+		primeNumberChecker = new PrimeNumberChecker();
+	}
+	
+	public PrimeNumbersTest(Integer inputNumber, boolean expectedValue){
+		input = inputNumber;
+		expected = expectedValue;
+	}
+	
+	@Parameterized.Parameters
+	public static Collection<Object[]> primeNumbers() {
+		return Arrays.asList(new Object[][]{
+				{2, true},
+				{6, false},
+				{19, true},
+				{22, false},
+				{23, true}
+		});
+	}
+	
+	@Test
+	public void testPrimeNumberChecker() {
+		assertEquals(expected, primeNumberChecker.validate(input));
+	}
+
+}
