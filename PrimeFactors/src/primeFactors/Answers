@@ -1,3 +1,9 @@
 1) Make a test, then change everything else to make it pass
 
 2) I agree. The test cases are assigned before the it is assumed that the code will pass it. This forces the developer to come up with test cases that are outside the realm of the abilities of the current code. Doing so means that the code will cover more cases.
+
+3) Advantages:
+   TDD is definitely a good way to ensure that your code does everything it needs to, rather than checking whether it does what you just coded it to do. It also provides a sense of direction that the code should be developed in.
+   
+   Disadvantages:
+   TDD is more time consuming than ad-hoc.
