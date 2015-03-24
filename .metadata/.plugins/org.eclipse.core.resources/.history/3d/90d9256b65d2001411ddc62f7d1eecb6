@@ -20,6 +20,6 @@ public class PrimeFactorsTest {
 
 	@Test
 	public void testTwo() throws Exception {
-		assertEquals(list(2), PrimeFactors.generate(2));
+		assertEquals(list(2), generate(2));
 	}
 }
