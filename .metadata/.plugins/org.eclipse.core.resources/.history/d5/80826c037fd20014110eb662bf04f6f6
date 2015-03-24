@@ -7,21 +7,24 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
 @RunWith(Parameterized.class)
 public class PrimeNumbersTest {
-	
+	/* */
 	private Integer input;
-	private List<Integer> expected;
+	private boolean expected;
+	private PrimeNumbers primeNumbers;
 	
-	private static List<Integer> list(Integer...integers) {
-		return Arrays.asList(integers);
+	@Before
+	public void initialize() {
+		primeNumberChecker = new PrimeNumberChecker();
 	}
-
-	public PrimeNumbersTest(Integer inputNumber, List<Integer> expectedValue){
+	
+	public PrimeNumbersTest(Integer inputNumber, boolean expectedValue){
 		input = inputNumber;
 		expected = expectedValue;
 	}
@@ -41,4 +44,21 @@ public class PrimeNumbersTest {
 	public void testPrimeNumbersChecker() {
 		assertEquals(expected, generate(input));
 	}
+	/* */
+	
+	private static List<Integer> list(Integer...integers) {
+		return Arrays.asList(integers);
+	}
+	/* *
+	@Test
+	public void testThree() throws Exception {
+		assertEquals(list(2), generate(3));
+	}
+	
+	@Test
+	public void testThirteen() throws Exception {
+		assertEquals(list(2,3,5,7,11), generate(13));
+	}
+	/* */
+
 }
